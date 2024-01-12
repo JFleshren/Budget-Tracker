@@ -5,14 +5,20 @@ USE budget_db;
 
 CREATE TABLE categories (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  name VARCHAR(255) NOT NULL
+  name VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE transactions (
   id INT PRIMARY KEY AUTO_INCREMENT,
   category_id INT,
-  description VARCHAR(255) NOT NULL,
+  description VARCHAR(50) NOT NULL,
   amount DECIMAL(10, 2) NOT NULL,
   date DATE NOT NULL,
   FOREIGN KEY (category_id) REFERENCES categories(id)
 );
+
+INSERT INTO categories (name) VALUES
+('Bills'),
+('Entertainment'),
+('Food'),
+('Misc');
