@@ -8,12 +8,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const connection = mysql.createConnection({
- // host: 'localhost',
- // user: 'your_mysql_user',
- // password: 'your_mysql_password',
- // database: 'budget_tracking_db',
-});
 
 connection.connect((err) => {
   if (err) {
