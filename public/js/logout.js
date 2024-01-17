@@ -1,4 +1,4 @@
-// JavaScript: Define the logout function
+//Define the logout function
 async function logout() {
     // Set up the URL for the logout endpoint (replace with your actual endpoint)
     const logoutEndpoint = 'https://your-api.com/logout';
