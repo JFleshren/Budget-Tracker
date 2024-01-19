@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { Transaction, Category } = require('../../models');
+const { Transactions, Category } = require('../../models');
 router.post('/', async (req, res) => {
     const { user_id, description, amount, date } = req.body;
   
     try {
-      const transactionData = await Transaction.create({
+      const transactionsData = await Transactions.create({
         user_id,
         description,
         amount,
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         category_id: entertainmentCategoryId,
       });
   
-      res.status(200).json(transactionData);
+      res.status(200).json(transactionsData);
     } catch (err) {
       console.error(err);
       res.status(500).json({ error: 'Internal Server Error' });

@@ -5,8 +5,8 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Category = require('./Category');
 
-class Transaction extends Model {}
-Transaction.init(
+class Transactions extends Model {}
+Transactions.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -32,12 +32,12 @@ Transaction.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'transaction',
+      modelName: 'transactions',
     }
   );
   // Connect to category model
-  Transaction.belongsTo(Category, {
+  Transactions.belongsTo(Category, {
     foreignKey: 'category_id',
   });
   
-  module.exports = Transaction;
+  module.exports = Transactions;
