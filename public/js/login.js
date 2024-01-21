@@ -17,12 +17,13 @@ async function login() {
       const response = await fetch(authEndpoint);
       const users = await response.json();
   
-      // Simulate finding the user based on the entered username and password
+      //Finds the user based on the entered username and password
       const authenticatedUser = users.find(user => user.username === username && user.email === password);
   
       if (authenticatedUser) {
-        alert('Login successful! Redirecting to the dashboard.');
-        // Redirect to the dashboard or perform other actions upon successful login
+        alert('Login successful!');
+        //Redirects user to their homepage
+        window.location.href =     
       } else {
         alert('Invalid username or password. Please try again.');
       }
