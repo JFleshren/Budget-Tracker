@@ -1,0 +1,53 @@
+{{!-- Include the layout --}}
+{{> layout pageTitle="Add Expense"}}
+
+{{!-- Content specific to the add expense page --}}
+<div class="container">
+  <h1>Add a New Expense</h1>
+
+  <form id="addExpenseForm">
+    <div class="form-group">
+      <label for="expenseDate">Date:</label>
+      <input type="date" id="expenseDate" name="expenseDate" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="expenseCategory">Category:</label>
+      <input type="text" id="expenseCategory" name="expenseCategory" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="expenseDescription">Description:</label>
+      <textarea id="expenseDescription" name="expenseDescription" class="form-control" rows="3" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="expenseAmount">Amount:</label>
+      <input type="number" id="expenseAmount" name="expenseAmount" class="form-control" step="0.01" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Expense</button>
+  </form>
+</div>
+
+<script>
+  // JavaScript to handle form submission
+  document.getElementById('addExpenseForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get values from the form
+    const date = document.getElementById('expenseDate').value;
+    const category = document.getElementById('expenseCategory').value;
+    const description = document.getElementById('expenseDescription').value;
+    const amount = document.getElementById('expenseAmount').value;
+
+    // Perform further validation if needed
+
+    // Submit the form data to the server (you need to implement this)
+    // For simplicity, we'll just display an alert
+    alert(`Expense added successfully:\nDate: ${date}\nCategory: ${category}\nDescription: ${description}\nAmount: ${amount}`);
+
+    // Redirect the user to the expenses page or perform any other desired action
+    window.location.href = '/expenses';
+  });
+</script>
