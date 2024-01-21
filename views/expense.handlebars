@@ -1,0 +1,41 @@
+{{!-- Include the layout --}}
+
+{{> layout pageTitle="Expenses"}}
+
+{{!-- Content specific to the expense list page --}}
+<div class="container">
+  <h1>Your Expenses</h1>
+
+  {{#if expenses.length}}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each expenses}}
+          <tr>
+            <td>{{formatDate date}}</td>
+            <td>{{category}}</td>
+            <td>{{description}}</td>
+            <td>${{amount}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p>No expenses to display.</p>
+  {{/if}}
+</div>
+
+<script>
+  // Helper function to format date
+  Handlebars.registerHelper('formatDate', function(date) {
+    // Implement your date formatting logic here
+    return new Date(date).toLocaleDateString();
+  });
+</script>
