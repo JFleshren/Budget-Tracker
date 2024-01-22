@@ -10,13 +10,10 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to MySQL:', err);
-  } else {
-    console.log('Connected to MySQL database');
-  }
-});
+// Connect to MySQL database
+sequelize.authenticate()
+  .then(() => console.log('Connected to MySQL database'))
+  .catch((err) => console.error('Error connecting to MySQL:', err));
 
 const sess = {
   secret: 'Super secret secret',
@@ -29,12 +26,10 @@ const sess = {
 };
 
 app.use(session(sess));
-app.use(session(sess)); 
 
+// Configure handlebars engine
+const hbs = exphbs.create({ helpers: customHelpers });
 app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
-
-app.engine('handlebars', exphbs({ helpers: customHelpers }));
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
@@ -43,9 +38,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
 });
