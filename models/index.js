@@ -1,13 +1,13 @@
-const User = require('./User')
-const Transactions = require('./Transactions')
+const user = require('./user')
+const transactions = require('./transactions')
 
-User.hasMany(Transactions, {
+User.hasMany(transactions, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
 })
 
-Transactions.belongsTo(User, {
+Transactions.belongsTo(user, {
   foreignKey: 'user_id',
 })
 
-module.exports = { User, Transactions }
+module.exports = { user, transactions }

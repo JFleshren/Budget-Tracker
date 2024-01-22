@@ -1,8 +1,8 @@
 const router = require('express').Router()
 const userRoutes = require('./userRoutes')
-const TransactionsRoutes = require('./TransactionsRoutes')
+const TransactionsRoutes = require('./transactionsRoutes')
 
 router.use('/users', userRoutes)
-router.use('/Transactions', TransactionsRoutes)
+router.use('/transactions', TransactionsRoutes)
 
 module.exports = router

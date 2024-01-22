@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
 
+
 class Category extends Model {}
 Category.init(
   {
@@ -43,11 +44,11 @@ Category.sync().then(() => {
     }),
   ])
     .then(() => {
-      console.log('Categories synced successfully')
+      console.log('categories synced successfully')
     })
     .catch((err) => {
       console.error('Error syncing', err)
     })
 })
 
-module.exports = Category
+module.exports = category
