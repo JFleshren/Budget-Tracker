@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-const Category = require('./Category');
+const { Model, DataTypes } = require('sequelize')
+const sequelize = require('../config/connection')
+const Category = require('./Category')
 
 class Transactions extends Model {}
 
@@ -11,7 +11,7 @@ Transactions.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },  
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -30,13 +30,13 @@ Transactions.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'transactions',
-  }
-);
+    modelName: 'Transactions',
+  },
+)
 
 // Connect to category model
 Transactions.belongsTo(Category, {
   foreignKey: 'category_id',
-});
+})
 
-module.exports = Transactions;
+module.exports = Transactions
