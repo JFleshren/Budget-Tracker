@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const { Transactions, Category } = require('../../models')
+const { transactions, category } = require('../../models')
 router.post('/', async (req, res) => {
   const { user_id, description, amount, date } = req.body
 
   try {
-    const transactionsData = await Transactions.create({
+    const transactionsData = await transactions.create({
       user_id,
       description,
       amount,

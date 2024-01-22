@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection')
-const { User, Category } = require('../models')
+const { user, category } = require('../models')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true })
@@ -9,7 +9,7 @@ const seedDatabase = async () => {
     returning: true,
   })
 
-  await Category.findOrCreate({
+  await category.findOrCreate({
     where: { name: 'Default', user_id: user.id },
     defaults: { name: 'Default', user_id: user.id },
   })
