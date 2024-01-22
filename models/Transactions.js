@@ -11,7 +11,7 @@ Transactions.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
+    },  
     description: {
       type: DataTypes.STRING,
       allowNull: false,
