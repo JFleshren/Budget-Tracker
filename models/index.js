@@ -1,12 +1,12 @@
 const user = require('./user')
 const transactions = require('./transactions')
 
-User.hasMany(transactions, {
+user.hasMany(transactions, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE',
 })
 
-Transactions.belongsTo(user, {
+transactions.belongsTo(user, {
   foreignKey: 'user_id',
 })
 

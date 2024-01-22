@@ -2,8 +2,8 @@ const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
 
 
-class Category extends Model {}
-Category.init(
+class category extends Model {}
+category.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -24,23 +24,23 @@ Category.init(
     modelName: 'category',
   },
 )
-Category.sync().then(() => {
+category.sync().then(() => {
   Promise.all([
-    Category.findOrCreate({
-      where: { name: 'Entertainment' },
-      defaults: { name: 'Entertainment' },
+    category.findOrCreate({
+      where: { name: 'entertainment' },
+      defaults: { name: 'entertainment' },
     }),
-    Category.findOrCreate({
-      where: { name: 'Bills' },
-      defaults: { name: 'Bills' },
+    category.findOrCreate({
+      where: { name: 'bills' },
+      defaults: { name: 'bills' },
     }),
-    Category.findOrCreate({
-      where: { name: 'Food' },
-      defaults: { name: 'Food' },
+    category.findOrCreate({
+      where: { name: 'food' },
+      defaults: { name: 'food' },
     }),
-    Category.findOrCreate({
-      where: { name: 'Misc' },
-      defaults: { name: 'Misc' },
+    category.findOrCreate({
+      where: { name: 'fisc' },
+      defaults: { name: 'fisc' },
     }),
   ])
     .then(() => {
