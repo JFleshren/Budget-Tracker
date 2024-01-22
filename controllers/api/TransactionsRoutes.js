@@ -11,6 +11,9 @@ router.post('/', async (req, res) => {
       amount,
       date,
       category_id: entertainmentCategoryId,
+      category_id: billsCategoryId,
+      category_id: foodCategoryId,
+      category_id: miscCategoryId,
     })
 
     res.status(200).json(transactionsData)
