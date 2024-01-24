@@ -14,7 +14,7 @@ N/A
 
 ## Usage
 
-1. Create an Account: Sign up for an account to start using the budget tracker.
+1. Create an Account: Sign up for an account to start using the budget tracker. 
 2. Log Income and Expenses: Add your financial transactions, specifying whether they are income or expenses.
 3. Set Budgets: Establish monthly budgets to manage your spending.
 4. View Reports: Analyze your financial data through visual reports.
