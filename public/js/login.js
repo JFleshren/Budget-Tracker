@@ -23,7 +23,9 @@ async function login() {
       if (authenticatedUser) {
         alert('Login successful!');
         //Redirects user to their homepage
-        window.location.href =     //--ADD HOMEPAGE URL HERE--//
+
+        window.location.href = '/homepage'   
+
       } else {
         alert('Invalid username or password. Please try again.');
       }
