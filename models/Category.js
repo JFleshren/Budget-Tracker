@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require('sequelize')
-const sequelize = require('../config/connection')
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
+class Category extends Model {}
 
-class category extends Model {}
-category.init(
+Category.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -22,33 +22,34 @@ category.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
-  },
-)
-category.sync().then(() => {
+  }
+);
+
+Category.sync().then(() => {
   Promise.all([
-    category.findOrCreate({
-      where: { name: 'entertainment' },
-      defaults: { name: 'entertainment' },
+    Category.findOrCreate({
+      where: { name: 'Entertainment' },
+      defaults: { name: 'Entertainment' },
     }),
-    category.findOrCreate({
-      where: { name: 'bills' },
-      defaults: { name: 'bills' },
+    Category.findOrCreate({
+      where: { name: 'Bills' },
+      defaults: { name: 'Bills' },
     }),
-    category.findOrCreate({
-      where: { name: 'food' },
-      defaults: { name: 'food' },
+    Category.findOrCreate({
+      where: { name: 'Food' },
+      defaults: { name: 'Food' },
     }),
-    category.findOrCreate({
-      where: { name: 'fisc' },
-      defaults: { name: 'fisc' },
+    Category.findOrCreate({
+      where: { name: 'Misc' },
+      defaults: { name: 'Misc' },
     }),
   ])
     .then(() => {
-      console.log('categories synced successfully')
+      console.log('Categories synced successfully');
     })
     .catch((err) => {
-      console.error('Error syncing', err)
-    })
-})
+      console.error('Error syncing categories', err);
+    });
+});
 
-module.exports = category
+module.exports = Category;

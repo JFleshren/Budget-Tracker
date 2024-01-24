@@ -1,9 +1,9 @@
-const router = require('express').Router()
-const userRoutes = require('./userRoutes')
+const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const transactionsRoutes = require('./transactionsRoutes'); // Corrected import path
 
-const transactionsRoutes = require('/transactionsRoutes')
+router.use('/users', userRoutes);
+router.use('/transactions', transactionsRoutes);
 
-router.use('/users', userRoutes)
-router.use('/transactions', transactionsRoutes)
+module.exports = router;
 
-module.exports = router

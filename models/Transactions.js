@@ -1,10 +1,10 @@
-const { Model, DataTypes } = require('sequelize')
-const sequelize = require('../config/connection')
-const category = require('./category')
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+const Category = require('./Category');
 
-class transactions extends Model {}
+class Transactions extends Model {}
 
-transactions.init(
+Transactions.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -31,12 +31,13 @@ transactions.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'transactions',
-  },
-)
+  }
+);
 
-// Connect to category model
-transactions.belongsTo(category, {
+// Connect to the Category model
+Transactions.belongsTo(Category, {
   foreignKey: 'category_id',
-})
+});
 
-module.exports = transactions
+module.exports = Transactions;
+

@@ -10,17 +10,14 @@ router.post('/', async (req, res) => {
       description,
       amount,
       date,
-      category_id: entertainmentCategoryId,
-      category_id: billsCategoryId,
-      category_id: foodCategoryId,
-      category_id: miscCategoryId,
-    })
+      category_ids, entertainmentCategoryId, billsCategoryId, foodCategoryId, miscCategoryId
+    });
 
     res.status(200).json(transactionsData)
   } catch (err) {
     console.error(err)
     res.status(500).json({ error: 'Internal Server Error' })
   }
-})
+});
 
-module.exports = router
+module.exports = router;
