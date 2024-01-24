@@ -58,4 +58,4 @@ user.init(
   },
 )
 
-module.exports = user
+module.exports = user;

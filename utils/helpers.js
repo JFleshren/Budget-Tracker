@@ -11,7 +11,7 @@ Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
 
 // Add as needed
 
-module.exports = Handlebars
+module.exports = Handlebars;
 
 // Addded helper functions below
 // {{formatCurrency totalAmount}}

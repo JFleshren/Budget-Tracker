@@ -51,4 +51,4 @@ category.sync().then(() => {
     })
 })
 
-module.exports = category
+module.exports = category;

@@ -39,4 +39,4 @@ transactions.belongsTo(category, {
   foreignKey: 'category_id',
 })
 
-module.exports = transactions
+module.exports = transactions;

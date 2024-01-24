@@ -35,4 +35,4 @@ function register() {
   
     //Redirects user to their profile page
     window.location.href = 
-}
+};

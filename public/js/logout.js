@@ -1,7 +1,7 @@
 //Define the logout function
 async function logout() {
   // Set up the URL for the logout endpoint (replace with your actual endpoint)
-  const logoutEndpoint = 'https://your-api.com/logout'
+  const logoutEndpoint = //'https://your-api.com/logout'//
 
   try {
     // Make a fetch request to the server for logout
@@ -31,4 +31,4 @@ async function logout() {
     console.error('Error during logout:', error)
     alert('An error occurred during logout. Please try again.')
   }
-}
+};
