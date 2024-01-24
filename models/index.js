@@ -10,4 +10,4 @@ transactions.belongsTo(user, {
   foreignKey: 'user_id',
 })
 
-module.exports = { user, transactions }
+module.exports = { user, transactions };

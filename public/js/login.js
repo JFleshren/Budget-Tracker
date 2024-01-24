@@ -10,7 +10,7 @@ async function login() {
     }
   
     // Set up the URL for the authentication endpoint (replace with your actual endpoint)
-    const authEndpoint = 'https://jsonplaceholder.typicode.com/users';
+    const authEndpoint = //'https://jsonplaceholder.typicode.com/users';
   
     try {
       // Make a fetch request to the server for authentication
@@ -18,12 +18,14 @@ async function login() {
       const users = await response.json();
   
       //Finds the user based on the entered username and password
-      const authenticatedUser = users.find(user => user.username === username && user.email === password);
+      const authenticatedUser = users.find(user => user.username === username && user.password === password);
   
       if (authenticatedUser) {
         alert('Login successful!');
         //Redirects user to their homepage
+
         window.location.href = '/homepage'   
+
       } else {
         alert('Invalid username or password. Please try again.');
       }
