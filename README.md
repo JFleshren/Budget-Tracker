@@ -9,8 +9,14 @@ Welcome to the Budget Tracker Website! This web application is designed to help 
 As a budget-conscious user, I want to be able to easily track my monthly expenses on the Budget Tracker website so that I can gain insights into my spending habits and stay within my financial goals.
 
 ## Installation
+Install the following
 
-N/A
+-Node.js
+-npm
+-Express
+-MySQL
+-.env
+-Sequelize
 
 ## Usage
 
