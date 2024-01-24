@@ -14,7 +14,7 @@ N/A
 
 ## Usage
 
-1. Create an Account: Sign up for an account to start using the budget tracker.
+1. Create an Account: Sign up for an account to start using the budget tracker. 
 2. Log Income and Expenses: Add your financial transactions, specifying whether they are income or expenses.
 3. Set Budgets: Establish monthly budgets to manage your spending.
 4. View Reports: Analyze your financial data through visual reports.
@@ -22,7 +22,8 @@ N/A
 
 ## Deployment Link
 
-www.pastehere.com
+Git Hub Pages: https://jfleshren.github.io/Budget-Tracker/
+Heroku: https://pennytracker-f3fd9c607b09.herokuapp.com/ 
 
 ## Credits
 
