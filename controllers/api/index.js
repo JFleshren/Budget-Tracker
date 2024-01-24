@@ -2,7 +2,7 @@ const router = require('express').Router()
 const userRoutes = require('./userRoutes')
 
 
-const transactionsRoutes = require('/transactionsRoutes')
+const transactions = require('./transactions.js');
 
 router.use('/users', userRoutes)
 router.use('./transactions', transactionsRoutes)
