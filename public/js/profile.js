@@ -34,5 +34,5 @@ function register() {
     alert('User registered successfully!');
   
     //Redirects user to their profile page
-    window.location.href = 
+    window.location.href = '/profile'
 }

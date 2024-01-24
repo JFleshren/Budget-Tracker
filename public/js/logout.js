@@ -1,7 +1,7 @@
 //Define the logout function
 async function logout() {
   // Set up the URL for the logout endpoint (replace with your actual endpoint)
-  const logoutEndpoint = 'https://your-api.com/logout'
+  // const logoutEndpoint = 'https://your-api.com/logout'
 
   try {
     // Make a fetch request to the server for logout
@@ -10,7 +10,7 @@ async function logout() {
       credentials: 'include', // Include credentials (cookies) in the request
       headers: {
         'Content-Type': 'application/json',
-        // You may need to include additional headers based on your server requirements
+        // may need to include additional headers based our server requirements
       },
       // You can include a request body if needed
       // body: JSON.stringify({ /* additional data */ }),
