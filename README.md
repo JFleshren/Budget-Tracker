@@ -22,7 +22,8 @@ N/A
 
 ## Deployment Link
 
-www.pastehere.com
+Git Hub Pages: https://jfleshren.github.io/Budget-Tracker/
+Heroku: https://pennytracker-f3fd9c607b09.herokuapp.com/ 
 
 ## Credits
 
