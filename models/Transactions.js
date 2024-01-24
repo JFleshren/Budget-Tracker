@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
-const category = require('category')
+const category = require('./category')
 
 class transactions extends Model {}
 
